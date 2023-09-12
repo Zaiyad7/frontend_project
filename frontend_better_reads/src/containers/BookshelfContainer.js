@@ -11,13 +11,24 @@ const BookshelfContainer = () => {
         return response.json();
       })
       .then((response) => {
-        console.log(response);
+        setUsers(response);
       });
   }, []);
-
+  const userLogin = (username) => {
+    // users.forEach((user) => {
+    //   console.log(user.userName);
+    //   if (user.userName === username) {
+    //     setUser(username);
+    //     console.log(username);
+    //   }
+    // });
+    for (const element of users) {
+      console.log(element);
+    }
+  };
   return (
     <>
-      <User />
+      <User userLogin={userLogin} />
     </>
   );
 };
