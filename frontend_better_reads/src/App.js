@@ -1,7 +1,8 @@
 import "./App.css";
+import BookshelfContainer from "./containers/BookshelfContainer";
 
 function App() {
-  return <BookShelfContainer />;
+  return <BookshelfContainer />;
 }
 
 export default App;
