@@ -17,7 +17,7 @@ public class Bookshelf { // K & R
 
     @ManyToOne
     @JoinColumn(name = "book_id")
-    @JsonIgnoreProperties({"bookshelves","author"})
+    @JsonIgnoreProperties({"bookshelves"})
     private Book book;
 
     @Column
