@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import User from "../components/User";
+import BookshelfList from "../components/BookshelfList";
 
 const BookshelfContainer = () => {
   const [user, setUser] = useState(null);
   const [users, setUsers] = useState([]);
+  const [bookshelves, setBookshelves] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:8080/users")
@@ -11,6 +13,7 @@ const BookshelfContainer = () => {
         return response.json();
       })
       .then((response) => {
+        console.log(response);
         setUsers(response);
       });
   }, []);
@@ -27,6 +30,7 @@ const BookshelfContainer = () => {
         // console.log(user.userName);
         if (user.userName === username) {
           setUser(user);
+          setBookshelves(user.bookshelves);
           userExists = true;
         }
       });
@@ -36,7 +40,13 @@ const BookshelfContainer = () => {
 
   return (
     <>
-      <User userLogin={userLogin} />
+      {user === null ? <User userLogin={userLogin} /> : null}
+      {user ? (
+        <div>
+          <h1>BetterReads</h1>
+          <BookshelfList bookshelves={bookshelves} />
+        </div>
+      ) : null}
     </>
   );
 };
