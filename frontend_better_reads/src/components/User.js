@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 const User = ({ userLogin }) => {
+  const [verified, setVerified] = useState(null);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.username.value);
+    // console.log(event.target.username.value);
     const username = event.target.username.value;
-    userLogin(username);
+    setVerified(userLogin(username));
+    console.log(verified);
   };
 
   return (
@@ -14,6 +19,7 @@ const User = ({ userLogin }) => {
         <input type="text" name="username" placeholder="Username" />
         <button type="submit">Login</button>
       </form>
+      <p hidden={verified === true || verified === null}>User does not exist</p>
     </>
   );
 };

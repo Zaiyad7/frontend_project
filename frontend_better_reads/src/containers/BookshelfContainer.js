@@ -3,7 +3,7 @@ import User from "../components/User";
 
 const BookshelfContainer = () => {
   const [user, setUser] = useState(null);
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8080/users")
@@ -14,18 +14,26 @@ const BookshelfContainer = () => {
         setUsers(response);
       });
   }, []);
+
   const userLogin = (username) => {
-    // users.forEach((user) => {
-    //   console.log(user.userName);
-    //   if (user.userName === username) {
-    //     setUser(username);
-    //     console.log(username);
-    //   }
-    // });
-    for (const element of users) {
-      console.log(element);
+    const allUsernames = [];
+    let userExists = false;
+    users.forEach((user) => {
+      allUsernames.push(user.userName);
+    });
+
+    if (allUsernames.includes(username)) {
+      users.forEach((user) => {
+        // console.log(user.userName);
+        if (user.userName === username) {
+          setUser(user);
+          userExists = true;
+        }
+      });
     }
+    return userExists;
   };
+
   return (
     <>
       <User userLogin={userLogin} />
