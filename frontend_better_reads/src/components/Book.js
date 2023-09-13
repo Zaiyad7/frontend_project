@@ -9,8 +9,8 @@ const Book = ({ book }) => {
         <li>Year : {book.book.year}</li>
       </ul>
       <form>
-        <label for="status">Status : </label>
-        <select name="status" value={book.status}>
+        <label htmlFor="status">Status : </label>
+        <select name="status" defaultValue={book.status}>
           <option value="unassign">Unassign</option>
           <option value="READ">Read</option>
           <option value="WANT_TO_READ">Want to Read</option>

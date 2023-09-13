@@ -1,11 +1,20 @@
 import { useState } from "react";
 import Bookshelf from "./Bookshelf";
 import BookList from "./BookList";
-const BookshelfList = ({ bookshelves }) => {
+const BookshelfList = ({
+  bookshelves,
+  allBooks,
+  showAllBooks,
+  displayAllBooks,
+}) => {
   //   console.log(bookshelves);
   const [selectedStatus, setSelectedStatus] = useState("ALL");
   const updateStatus = (newStatus) => {
     setSelectedStatus(newStatus);
+  };
+
+  const handleClick = () => {
+    displayAllBooks();
   };
 
   return (
@@ -35,7 +44,14 @@ const BookshelfList = ({ bookshelves }) => {
         title="Want To Read"
         status="WANT_TO_READ"
       />
-      <BookList bookshelves={bookshelves} selectedStatus={selectedStatus} />
+      <br></br>
+      <button onClick={handleClick}>Add books to bookshelf</button>
+      <BookList
+        bookshelves={bookshelves}
+        selectedStatus={selectedStatus}
+        showAllBooks={showAllBooks}
+        allBooks={allBooks}
+      />
     </>
   );
 };

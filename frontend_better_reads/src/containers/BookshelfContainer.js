@@ -6,6 +6,8 @@ const BookshelfContainer = () => {
   const [user, setUser] = useState(null);
   const [users, setUsers] = useState([]);
   const [bookshelves, setBookshelves] = useState(null);
+  const [allBooks, setAllBooks] = useState(null);
+  const [showAllBooks, setShowAllBooks] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8080/users")
@@ -18,6 +20,17 @@ const BookshelfContainer = () => {
       });
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:8080/books")
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        console.log(response);
+        setAllBooks(response);
+      });
+  }, []);
+
   const userLogin = (username) => {
     const allUsernames = [];
     let userExists = false;
@@ -27,7 +40,6 @@ const BookshelfContainer = () => {
 
     if (allUsernames.includes(username)) {
       users.forEach((user) => {
-        // console.log(user.userName);
         if (user.userName === username) {
           setUser(user);
           setBookshelves(user.bookshelves);
@@ -38,13 +50,22 @@ const BookshelfContainer = () => {
     return userExists;
   };
 
+  const displayAllBooks = () => {
+    setShowAllBooks(true);
+  };
+
   return (
     <>
       {user === null ? <User userLogin={userLogin} /> : null}
       {user ? (
         <div>
           <h1>BetterReads</h1>
-          <BookshelfList bookshelves={bookshelves} />
+          <BookshelfList
+            bookshelves={bookshelves}
+            allBooks={allBooks}
+            showAllBooks={showAllBooks}
+            displayAllBooks={displayAllBooks}
+          />
         </div>
       ) : null}
     </>
