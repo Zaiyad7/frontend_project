@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Book = ({ book }) => {
+const Book = ({ book, updateBookshelvesForUser }) => {
   const [status, setStatus] = useState(book.status);
   // console.log(book);
 
@@ -12,9 +12,6 @@ const Book = ({ book }) => {
     const formJson = Object.fromEntries(formData.entries());
     // console.log(formJson.status);
     setStatus(formJson.status);
-  };
-
-  useEffect(() => {
     fetch(`http://localhost:8080/bookshelf/${book.id}/status`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -24,9 +21,9 @@ const Book = ({ book }) => {
         return response.json();
       })
       .then((response) => {
-        console.log(response);
+        updateBookshelvesForUser(book.id, status);
       });
-  }, [status]);
+  };
 
   return (
     <>

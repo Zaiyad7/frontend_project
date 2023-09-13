@@ -50,6 +50,18 @@ const BookshelfContainer = () => {
     return userExists;
   };
 
+  const updateBookshelvesForUser = (bookId, status) => {
+    const updatedBookshelves = bookshelves.map((bookshelf) => {
+      if (bookshelf.id == bookId) {
+        bookshelf.status = status;
+        return bookshelf;
+      } else {
+        return bookshelf;
+      }
+    });
+    setBookshelves(updatedBookshelves);
+  };
+
   const displayAllBooks = () => {
     setShowAllBooks(true);
   };
@@ -70,6 +82,7 @@ const BookshelfContainer = () => {
             showAllBooks={showAllBooks}
             displayAllBooks={displayAllBooks}
             displayBookshelfBooks={displayBookshelfBooks}
+            updateBookshelvesForUser={updateBookshelvesForUser}
           />
         </div>
       ) : null}
