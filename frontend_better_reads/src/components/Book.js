@@ -8,6 +8,16 @@ const Book = ({ book }) => {
         <li>Genre : {book.book.genre}</li>
         <li>Year : {book.book.year}</li>
       </ul>
+      <form>
+        <label for="status">Status : </label>
+        <select name="status" value={book.status}>
+          <option value="unassign">Unassign</option>
+          <option value="READ">Read</option>
+          <option value="WANT_TO_READ">Want to Read</option>
+          <option value="CURRENTLY_READING">Currently Reading</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
     </>
   );
 };
