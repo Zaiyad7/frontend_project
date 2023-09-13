@@ -170,7 +170,7 @@ public class DataLoader implements ApplicationRunner {
         Bookshelf bookshelf16 = new Bookshelf(user5, bookHM1);
         Bookshelf bookshelf17 = new Bookshelf(user7, bookKI2);
         Bookshelf bookshelf18 = new Bookshelf(user6, bookAC1);
-        Bookshelf bookshelf19 = new Bookshelf(user7, bookKI2);
+        Bookshelf bookshelf19 = new Bookshelf(user1, bookKI2);
         Bookshelf bookshelf20 = new Bookshelf(user5, bookGO1);
 
         bookshelfRepository.saveAll(Arrays.asList(
