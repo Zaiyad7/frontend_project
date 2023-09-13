@@ -3,7 +3,7 @@ import Bookshelf from "./Bookshelf";
 import BookList from "./BookList";
 const BookshelfList = ({ bookshelves }) => {
   //   console.log(bookshelves);
-  const [selectedStatus, setSelectedStatus] = useState("");
+  const [selectedStatus, setSelectedStatus] = useState("ALL");
   const updateStatus = (newStatus) => {
     setSelectedStatus(newStatus);
   };
