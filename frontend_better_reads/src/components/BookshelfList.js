@@ -8,6 +8,8 @@ const BookshelfList = ({
   displayAllBooks,
   displayBookshelfBooks,
   updateBookshelvesForUser,
+  user,
+  addBookToBookshelves,
 }) => {
   //   console.log(bookshelves);
   const [selectedStatus, setSelectedStatus] = useState("ALL");
@@ -58,6 +60,8 @@ const BookshelfList = ({
         showAllBooks={showAllBooks}
         allBooks={allBooks}
         updateBookshelvesForUser={updateBookshelvesForUser}
+        user={user}
+        addBookToBookshelves={addBookToBookshelves}
       />
     </>
   );

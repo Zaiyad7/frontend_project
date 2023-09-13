@@ -7,6 +7,8 @@ const BookList = ({
   showAllBooks,
   allBooks,
   updateBookshelvesForUser,
+  user,
+  addBookToBookshelves,
 }) => {
   let bookComponents = [];
 
@@ -36,7 +38,14 @@ const BookList = ({
   } else {
     bookComponents = allBooks.map((book) => {
       // console.log(book);
-      return <AllBook key={book.id} book={book} />;
+      return (
+        <AllBook
+          key={book.id}
+          book={book}
+          user={user}
+          addBookToBookshelves={addBookToBookshelves}
+        />
+      );
     });
   }
 

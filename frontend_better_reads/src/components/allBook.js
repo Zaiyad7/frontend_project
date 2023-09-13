@@ -1,5 +1,19 @@
-const AllBook = ({ book }) => {
-  console.log(book);
+const AllBook = ({ book, user, addBookToBookshelves }) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+
+    fetch(`http://localhost:8080/bookshelf`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: user.id, bookId: book.id }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        addBookToBookshelves(response);
+      });
+  };
 
   return (
     <>
@@ -12,16 +26,7 @@ const AllBook = ({ book }) => {
         </li>
         <li>Year : {book.year}</li>
       </ul>
-      <form>
-        <label htmlFor="status">Status : </label>
-        <select name="status">
-          <option value="unassign">Unassign</option>
-          <option value="READ">Read</option>
-          <option value="WANT_TO_READ">Want to Read</option>
-          <option value="CURRENTLY_READING">Currently Reading</option>
-        </select>
-        <button type="submit">Submit</button>
-      </form>
+      <button onClick={handleClick}>Add to my Bookshelf </button>
     </>
   );
 };

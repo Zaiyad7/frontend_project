@@ -1,7 +1,4 @@
-import { useState, useEffect } from "react";
-
 const Book = ({ book, updateBookshelvesForUser }) => {
-  const [status, setStatus] = useState(book.status);
   // console.log(book);
 
   const handleSubmit = (event) => {
@@ -11,17 +8,17 @@ const Book = ({ book, updateBookshelvesForUser }) => {
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
     // console.log(formJson.status);
-    setStatus(formJson.status);
+
     fetch(`http://localhost:8080/bookshelf/${book.id}/status`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: status }),
+      body: JSON.stringify({ status: formJson.status }),
     })
       .then((response) => {
         return response.json();
       })
       .then((response) => {
-        updateBookshelvesForUser(book.id, status);
+        updateBookshelvesForUser(book.id, formJson.status);
       });
   };
 
