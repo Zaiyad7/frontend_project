@@ -1,7 +1,14 @@
-const Bookshelf = ({ title, bookshelves, status, updateStatus }) => {
+const Bookshelf = ({
+  title,
+  bookshelves,
+  status,
+  updateStatus,
+  displayBookshelfBooks,
+}) => {
   const handleClick = () => {
     updateStatus(status);
-    console.log(status);
+    displayBookshelfBooks();
+    // console.log(status);
   };
   return (
     <>

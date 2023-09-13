@@ -26,7 +26,7 @@ const BookshelfContainer = () => {
         return response.json();
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setAllBooks(response);
       });
   }, []);
@@ -54,6 +54,10 @@ const BookshelfContainer = () => {
     setShowAllBooks(true);
   };
 
+  const displayBookshelfBooks = () => {
+    setShowAllBooks(false);
+  };
+
   return (
     <>
       {user === null ? <User userLogin={userLogin} /> : null}
@@ -65,6 +69,7 @@ const BookshelfContainer = () => {
             allBooks={allBooks}
             showAllBooks={showAllBooks}
             displayAllBooks={displayAllBooks}
+            displayBookshelfBooks={displayBookshelfBooks}
           />
         </div>
       ) : null}

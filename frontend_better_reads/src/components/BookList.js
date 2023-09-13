@@ -1,5 +1,5 @@
 import Book from "./Book";
-import allBook from "./allBook";
+import AllBook from "./AllBook";
 
 const BookList = ({ bookshelves, selectedStatus, showAllBooks, allBooks }) => {
   let bookComponents = [];
@@ -17,7 +17,8 @@ const BookList = ({ bookshelves, selectedStatus, showAllBooks, allBooks }) => {
     }
   } else {
     bookComponents = allBooks.map((book) => {
-      return <allBook key={book.id} />;
+      // console.log(book);
+      return <AllBook key={book.id} book={book} />;
     });
   }
 
