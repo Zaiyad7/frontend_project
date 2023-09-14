@@ -66,7 +66,8 @@ const BookList = ({
   return (
     <>
       <h3> {displayStatus(selectedStatus)} Books</h3>
-      {bookComponents}
+      <br></br>
+      <section id="books-grid">{bookComponents}</section>
     </>
   );
 };

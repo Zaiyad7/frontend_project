@@ -1,3 +1,5 @@
+import "./Bookshelf.css";
+
 const Bookshelf = ({
   title,
   bookshelves,
@@ -12,8 +14,14 @@ const Bookshelf = ({
   };
   return (
     <>
-      <h3>{title}</h3>
-      <button onClick={handleClick}>Select</button>
+      <section id="bookshelf">
+        <h3>
+          {title}
+          <button id="bookshelf-button" onClick={handleClick}>
+            Select
+          </button>
+        </h3>
+      </section>
     </>
   );
 };

@@ -1,3 +1,5 @@
+import "./Book.css";
+
 const Book = ({ book, updateBookshelvesForUser }) => {
   // console.log(book);
 
@@ -23,10 +25,10 @@ const Book = ({ book, updateBookshelvesForUser }) => {
   };
 
   return (
-    <>
-      <h4>{book.book.title}</h4>
+    <div id="book">
+      <h4 id="book-header">{book.book.title}</h4>
       <img src={require("../closedBook.png")} alt="book" />
-      <ul>
+      <ul id="book-info">
         <li>Author : {book.book.author.name}</li>
         <li>
           Genre :
@@ -43,7 +45,7 @@ const Book = ({ book, updateBookshelvesForUser }) => {
         </select>
         <button type="submit">Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,26 @@
+.shelves-books {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem;
+}
+
+#bookshelves {
+  margin: 20px;
+  border: 2px solid black;
+}
+
+#bookshelves-title {
+  font-size: 35px;
+}
+
+#books {
+  border: 2px solid black;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  /* gap: 20px; */
+}
+
+#books-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
