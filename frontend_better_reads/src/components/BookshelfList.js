@@ -58,7 +58,9 @@ const BookshelfList = ({
           displayBookshelfBooks={displayBookshelfBooks}
         />
         <br></br>
-        <button onClick={handleClick}>Add books to bookshelf</button>
+        <button id="add-button" onClick={handleClick}>
+          Add Books to Bookshelf
+        </button>
       </section>
 
       <section id="books" className="shelves-books">

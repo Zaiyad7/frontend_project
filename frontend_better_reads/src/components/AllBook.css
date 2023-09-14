@@ -1,0 +1,55 @@
+#all-book {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-right: 8px;
+}
+
+#book-header {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+#all-book img {
+  height: 200px;
+  margin-left: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#book-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#book-info li {
+  font-size: 20px;
+  color: #777;
+}
+
+#all-book button {
+  background-color: #5998da;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#all-book button:hover {
+  background-color: #0056b3;
+}

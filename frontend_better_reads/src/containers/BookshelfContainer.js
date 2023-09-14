@@ -87,7 +87,7 @@ const BookshelfContainer = () => {
       {user === null ? <User userLogin={userLogin} /> : null}
       {user ? (
         <div className="bookshelf-container">
-          <h1 id="title">BetterReads</h1>
+          <h1 id="header">BetterReads</h1>
           <BookshelfList
             bookshelves={bookshelves}
             allBooks={allBooks}
