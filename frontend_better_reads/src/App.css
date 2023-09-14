@@ -4,9 +4,6 @@ body {
 #title {
   font-size: 7vh;
   margin-left: 1vw;
-  border: 2px solid black;
-}
-
-img {
-  height: 200px;
+  margin-bottom: 0px;
+  /* border: 2px solid black; */
 }

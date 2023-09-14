@@ -1,5 +1,6 @@
 import Book from "./Book";
 import AllBook from "./AllBook";
+import "./BookList.css";
 
 const BookList = ({
   bookshelves,
@@ -65,7 +66,7 @@ const BookList = ({
 
   return (
     <>
-      <h3> {displayStatus(selectedStatus)} Books</h3>
+      <h3 id="selected-bookshelf"> {displayStatus(selectedStatus)} Books</h3>
       <br></br>
       <section id="books-grid">{bookComponents}</section>
     </>

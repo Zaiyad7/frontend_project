@@ -31,7 +31,7 @@ const Book = ({ book, updateBookshelvesForUser }) => {
       <ul id="book-info">
         <li>Author : {book.book.author.name}</li>
         <li>
-          Genre :
+          Genre :{" "}
           {book.book.genre.charAt(0) + book.book.genre.toLowerCase().slice(1)}
         </li>
         <li>Year : {book.book.year}</li>
