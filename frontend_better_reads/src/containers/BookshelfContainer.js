@@ -70,6 +70,10 @@ const BookshelfContainer = () => {
     setShowAllBooks(false);
   };
 
+  const addBookToBookshelves = (book) => {
+    setBookshelves([...bookshelves, book]);
+  };
+
   return (
     <>
       {user === null ? <User userLogin={userLogin} /> : null}
@@ -83,6 +87,8 @@ const BookshelfContainer = () => {
             displayAllBooks={displayAllBooks}
             displayBookshelfBooks={displayBookshelfBooks}
             updateBookshelvesForUser={updateBookshelvesForUser}
+            user={user}
+            addBookToBookshelves={addBookToBookshelves}
           />
         </div>
       ) : null}
