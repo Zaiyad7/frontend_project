@@ -24,7 +24,7 @@ const BookList = ({
 
     return displayStatusArray.join(" ");
   };
-
+  console.log(selectedStatus);
   if (!showAllBooks) {
     bookshelves.forEach((book) => {
       if (book.status === selectedStatus) {

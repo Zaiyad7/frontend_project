@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./User.css";
 
 const User = ({ userLogin }) => {
   const [verified, setVerified] = useState(null);
@@ -12,15 +13,22 @@ const User = ({ userLogin }) => {
   };
 
   return (
-    <>
-      <h1>BetterReads</h1>
-      <h2>Like GoodReads but Better</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="username" placeholder="Username" />
-        <button type="submit">Login</button>
+    <div className="user">
+      <h1 id="login-title">BetterReads</h1>
+      <h2 id="slogan">Like GoodReads but Better</h2>
+      <form id="login-form" onSubmit={handleSubmit}>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          placeholder="Username"
+        />
+        <button id="login-submit" type="submit">
+          Login
+        </button>
       </form>
       <p hidden={verified === true || verified === null}>User does not exist</p>
-    </>
+    </div>
   );
 };
 

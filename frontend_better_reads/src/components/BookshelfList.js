@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Bookshelf from "./Bookshelf";
 import BookList from "./BookList";
+import "./BookshelfList.css";
 const BookshelfList = ({
   bookshelves,
   allBooks,
@@ -13,7 +14,7 @@ const BookshelfList = ({
   removeBookFromAllBooks,
 }) => {
   //   console.log(bookshelves);
-  const [selectedStatus, setSelectedStatus] = useState("ALL");
+  const [selectedStatus, setSelectedStatus] = useState("MY");
   const updateStatus = (newStatus) => {
     setSelectedStatus(newStatus);
   };
