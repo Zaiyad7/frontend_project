@@ -9,6 +9,7 @@ const BookList = ({
   updateBookshelvesForUser,
   user,
   addBookToBookshelves,
+  removeBookFromAllBooks,
 }) => {
   let bookComponents = [];
 
@@ -36,7 +37,7 @@ const BookList = ({
         );
       }
     });
-    if (selectedStatus === "ALL") {
+    if (selectedStatus === "MY") {
       bookComponents = bookshelves.map((book) => {
         return (
           <Book
@@ -56,6 +57,7 @@ const BookList = ({
           book={book}
           user={user}
           addBookToBookshelves={addBookToBookshelves}
+          removeBookFromAllBooks={removeBookFromAllBooks}
         />
       );
     });

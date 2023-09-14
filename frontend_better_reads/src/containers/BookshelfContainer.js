@@ -74,6 +74,14 @@ const BookshelfContainer = () => {
     setBookshelves([...bookshelves, book]);
   };
 
+  const removeBookFromAllBooks = (book) => {
+    setAllBooks(
+      allBooks.filter((filterBook) => {
+        return filterBook.id !== book.id;
+      })
+    );
+  };
+
   return (
     <>
       {user === null ? <User userLogin={userLogin} /> : null}
@@ -89,6 +97,7 @@ const BookshelfContainer = () => {
             updateBookshelvesForUser={updateBookshelvesForUser}
             user={user}
             addBookToBookshelves={addBookToBookshelves}
+            removeBookFromAllBooks={removeBookFromAllBooks}
           />
         </div>
       ) : null}

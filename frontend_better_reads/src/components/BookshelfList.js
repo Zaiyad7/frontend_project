@@ -10,6 +10,7 @@ const BookshelfList = ({
   updateBookshelvesForUser,
   user,
   addBookToBookshelves,
+  removeBookFromAllBooks,
 }) => {
   //   console.log(bookshelves);
   const [selectedStatus, setSelectedStatus] = useState("ALL");
@@ -63,6 +64,7 @@ const BookshelfList = ({
         updateBookshelvesForUser={updateBookshelvesForUser}
         user={user}
         addBookToBookshelves={addBookToBookshelves}
+        removeBookFromAllBooks={removeBookFromAllBooks}
       />
     </>
   );

@@ -37,7 +37,6 @@ const Book = ({ book, updateBookshelvesForUser }) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="status">Status : </label>
         <select name="status" defaultValue={book.status}>
-          <option value="unassign">Unassign</option>
           <option value="READ">Read</option>
           <option value="WANT_TO_READ">Want to Read</option>
           <option value="CURRENTLY_READING">Currently Reading</option>

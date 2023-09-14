@@ -1,7 +1,12 @@
-const AllBook = ({ book, user, addBookToBookshelves }) => {
+const AllBook = ({
+  book,
+  user,
+  addBookToBookshelves,
+  removeBookFromAllBooks,
+}) => {
   const handleClick = (event) => {
     event.preventDefault();
-
+    console.log(book);
     fetch(`http://localhost:8080/bookshelf`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -12,6 +17,7 @@ const AllBook = ({ book, user, addBookToBookshelves }) => {
       })
       .then((response) => {
         addBookToBookshelves(response);
+        removeBookFromAllBooks(book);
       });
   };
 
