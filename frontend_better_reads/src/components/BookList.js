@@ -12,6 +12,18 @@ const BookList = ({
 }) => {
   let bookComponents = [];
 
+  console.log(selectedStatus);
+
+  const displayStatus = (status) => {
+    const statusArray = status.split("_");
+
+    const displayStatusArray = statusArray.map((status) => {
+      return status.charAt(0) + status.toLowerCase().slice(1);
+    });
+
+    return displayStatusArray.join(" ");
+  };
+
   if (!showAllBooks) {
     bookshelves.forEach((book) => {
       if (book.status === selectedStatus) {
@@ -51,7 +63,7 @@ const BookList = ({
 
   return (
     <>
-      <h3> Books</h3>
+      <h3> {displayStatus(selectedStatus)} Books</h3>
       {bookComponents}
     </>
   );

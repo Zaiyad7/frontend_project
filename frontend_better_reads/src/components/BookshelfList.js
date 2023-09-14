@@ -19,6 +19,7 @@ const BookshelfList = ({
 
   const handleClick = () => {
     displayAllBooks();
+    updateStatus("ALL");
   };
 
   return (
@@ -28,7 +29,7 @@ const BookshelfList = ({
         bookshelves={bookshelves}
         title="My Books"
         updateStatus={updateStatus}
-        status="ALL"
+        status="MY"
         displayBookshelfBooks={displayBookshelfBooks}
       />
       <Bookshelf
