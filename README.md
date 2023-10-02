@@ -20,6 +20,14 @@
 
 This project allows for the user to manage an online digital library of their books, allowing them to keep track of what books they've read, what books they want to read and what books they're currently reading. The user can also add new books to their virtual library from a larger catalogue of books.
 
+## Demo
+
+
+https://github.com/Zaiyad7/frontend_project/assets/93227269/2f23906f-5e9c-434f-9c18-b117f9130176
+
+
+
+
 ## Setup and Installation
 
 This project was done using Spring Boot for the backend and React for the frontend. After cloning/forking the repository a database should be created called bookshelf_db and you should run the main program file BookshelfApplication.java.
