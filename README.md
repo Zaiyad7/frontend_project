@@ -97,9 +97,9 @@ Further information about the backend including its specific README file can be 
 
 ## **_Collaborators_**
 
-- Blezzy [blezzydcruz]()
-- Zaiyad
-- Yihang
-- Hannah
+- Blezzy [blezzydcruz]("https://github.com/blezzydcruz")
+- Zaiyad [Zaiyad7]("https://github.com/Zaiyad7/frontend_project")
+- Yihang [nehcobiy]("https://github.com/nehcobiy")
+- Hannah [hadams0](https://github.com/hadams0)
 
 <hr />
