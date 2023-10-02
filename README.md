@@ -1,5 +1,21 @@
 # Better Reads - Digital Book Catalogue
 
+- [Better Reads - Digital Book Catalogue](#better-reads---digital-book-catalogue)
+  - [Description](#description)
+  - [Setup and Installation](#setup-and-installation)
+  - [Tech Stack and Dependencies](#tech-stack-and-dependencies)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+  - [Diagrams](#diagrams)
+    - [Wireframe](#wireframe)
+    - [Component Diagram](#component-diagram)
+  - [MVP, Extensions, Future Work](#mvp-extensions-future-work)
+    - [MVP](#mvp)
+    - [Extensions](#extensions)
+    - [Summary](#summary)
+  - [Backend Information](#backend-information)
+  - [**_Collaborators_**](#collaborators)
+
 ## Description
 
 This project allows for the user to manage an online digital library of their books, allowing them to keep track of what books they've read, what books they want to read and what books they're currently reading. The user can also add new books to their virtual library from a larger catalogue of books.
