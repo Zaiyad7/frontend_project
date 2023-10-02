@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/frontend_project/static/css/main.bf8b7022.css",
+    "main.js": "/frontend_project/static/js/main.1f40e1c1.js",
+    "static/js/787.3d8e835b.chunk.js": "/frontend_project/static/js/787.3d8e835b.chunk.js",
+    "static/media/closedBook.png": "/frontend_project/static/media/closedBook.18ed0fc84c0a95da97e6.png",
+    "index.html": "/frontend_project/index.html",
+    "main.bf8b7022.css.map": "/frontend_project/static/css/main.bf8b7022.css.map",
+    "main.1f40e1c1.js.map": "/frontend_project/static/js/main.1f40e1c1.js.map",
+    "787.3d8e835b.chunk.js.map": "/frontend_project/static/js/787.3d8e835b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf8b7022.css",
+    "static/js/main.1f40e1c1.js"
+  ]
+}
