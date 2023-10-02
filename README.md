@@ -2,6 +2,7 @@
 
 - [Better Reads - Digital Book Catalogue](#better-reads---digital-book-catalogue)
   - [Description](#description)
+  - [Demo](#demo)
   - [Setup and Installation](#setup-and-installation)
   - [Tech Stack and Dependencies](#tech-stack-and-dependencies)
     - [Backend](#backend)
@@ -22,11 +23,7 @@ This project allows for the user to manage an online digital library of their bo
 
 ## Demo
 
-
 https://github.com/Zaiyad7/frontend_project/assets/93227269/2f23906f-5e9c-434f-9c18-b117f9130176
-
-
-
 
 ## Setup and Installation
 
@@ -100,9 +97,9 @@ Further information about the backend including its specific README file can be 
 
 ## **_Collaborators_**
 
-- Blezzy
-- Zaiyad
-- Yihang
-- Hannah
+- Blezzy [blezzydcruz](https://github.com/blezzydcruz)
+- Zaiyad [Zaiyad7](https://github.com/Zaiyad7)
+- Yihang [nehcobiy](https://github.com/nehcobiy)
+- Hannah [hadams0](https://github.com/hadams0)
 
 <hr />
