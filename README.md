@@ -10,7 +10,7 @@
   - [Diagrams](#diagrams)
     - [Wireframe](#wireframe)
     - [Component Diagram](#component-diagram)
-  - [MVP, Extensions, Future Work](#mvp-extensions-future-work)
+  - [MVP, Extensions and Summary](#mvp-extensions-and-summary)
     - [MVP](#mvp)
     - [Extensions](#extensions)
     - [Summary](#summary)
@@ -63,7 +63,7 @@ To run this project you will need to install IntelliJ IDEA JDK 17, postgresSQL a
 
 ![Component Diagram](frontend_better_reads/component_diagram.png)
 
-## MVP, Extensions, Future Work
+## MVP, Extensions and Summary
 
 ### MVP
 
